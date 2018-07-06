@@ -1,0 +1,122 @@
+<head>
+<Title>Rainbow</Title>
+<Style type="text/css">
+ #rectV
+	{ border : 2px solid violet;
+		background-color : violet;
+		width:700px;
+		height:700px;
+    }
+   
+ #rectI
+    { border : 2px solid indigo;
+		background-color : indigo;
+		width:600px;
+		height:600px;
+    }
+	 
+ #rectB
+	{ border : 2px solid blue;
+		background-color : blue;
+		width:500px;
+		height:500px;
+    }
+ #rectG
+	{ border : 2px solid green;
+		background-color : green;
+		width:400px;
+		height:400px;
+	}
+ #rectY
+	{ border : 2px solid orange;
+		background-color : yellow;
+		width:300px;
+		height:300px;
+	}
+ #rectO
+	{ border : 2px solid yellow;
+		background-color : orange;
+		width:200px;
+		height:200px;
+	}
+ #rectR
+	{ border : 2px solid red;
+		background-color : red;
+		width:100px;
+		height:100px;
+	}
+ .box
+ {  padding:5px;
+	position: absolute;
+    left: 45px;
+	top: 45px;
+	border-radius: 50%;
+ }
+ 
+</Style>
+
+</head>
+
+<body>
+
+
+<h3 Style = "text-align:center; Color:red">test </h3>
+<div id="rainbow"> </div>
+	
+
+<script >
+var arrayId = ["rectV", "rectI", "rectB", "rectG", "rectY", "rectO", "rectR"];
+var parent = document.getElementById("rainbow");
+for (i=0; i<arrayId.length; i++){
+var div = document.createElement("div");
+div.id = arrayId[i];
+div.className="box";
+parent.appendChild(div);
+parent=div;
+}
+
+var BooXX = document.getElementsByClassName("box");
+for (x=0; x<50; x++){
+	for (y=0; y<BooXX.length; y++){
+		BooXX[y].style['border-radius'] = x+"%";
+
+	}
+
+} 
+
+/*
+var divV = document.createElement("div");
+divV.id = "rectV";
+divV.className="box";
+var divI = document.createElement("div");
+divI.id= "rectI";
+divI.className="box";
+var divB = document.createElement("div");
+divB.id= "rectB";
+divB.className="box";
+var divG = document.createElement("div");
+divG.id= "rectG";
+divG.className="box";
+var divY = document.createElement("div");
+divY.id= "rectY";
+divY.className="box";
+var divO = document.createElement("div");
+divO.id= "rectO";
+divO.className="box";
+var divR = document.createElement("div");
+divR.id= "rectR";
+divR.className="box";
+
+document.getElementById("rainbow").appendChild(divV);
+divV.appendChild(divI);
+divI.appendChild(divB);
+divB.appendChild(divG);
+divG.appendChild(divY);
+divY.appendChild(divO);
+divO.appendChild(divR);
+
+*/
+</script>
+
+
+	</body>
