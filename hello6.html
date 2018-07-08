@@ -1,0 +1,86 @@
+<!doctype html PUBLIC "-//W3C//Dtd XHTML 1.0 Transitional//ES"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+<Title>Rainbow</Title>
+<Style type="text/css">
+ #rectV
+	{ border : 2px solid violet;
+		background-color : violet;
+		width:700px;
+		height:700px;
+    }
+   
+ #rectI
+    { border : 2px solid indigo;
+		background-color : indigo;
+		width:600px;
+		height:600px;
+    }
+	 
+ #rectB
+	{ border : 2px solid blue;
+		background-color : blue;
+		width:500px;
+		height:500px;
+    }
+ #rectG
+	{ border : 2px solid green;
+		background-color : green;
+		width:400px;
+		height:400px;
+	}
+ #rectY
+	{ border : 2px solid orange;
+		background-color : yellow;
+		width:300px;
+		height:300px;
+	}
+ #rectO
+	{ border : 2px solid yellow;
+		background-color : orange;
+		width:200px;
+		height:200px;
+	}
+ #rectR
+	{ border : 2px solid red;
+		background-color : red;
+		width:100px;
+		height:100px;
+	}
+ .box
+ {  padding:5px;
+	position: absolute;
+    left: 45px;
+	top: 45px;
+
+ }
+</style>
+</head>
+
+<body>
+<div id="rainbow"> </div>
+ 
+<script>
+var arrayId = ["rectV", "rectI", "rectB", "rectG", "rectY", "rectO", "rectR"];
+var parent = document.getElementById("rainbow");
+for (i=0;i<arrayId.length;i++){
+	var color = document.createElement("color");
+	color.id = arrayId[i];
+	color.className = "box";
+	parent.appendChild(color);
+	parent=color;
+}
+var colorBox = document.getElementsByClassName("box");
+for (x=0; x<50; x++){
+	for(y=0; y<colorBox.length; y++){
+		colorBox[y].style['border-radius']=x+"%"
+	}
+}
+
+</script>
+
+
+</body>
+</html>
