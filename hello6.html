@@ -78,7 +78,13 @@ for (x=0; x<50; x++){
 	(function(x,y){
 		setTimeout(function(){
 			colorBox[y].style['border-radius']=x+"%";	
-		}, 3000)})(x, y);
+		}, x * 100);
+		
+		setTimeout(function(){
+			colorBox[y].style['border-radius']=x+"%";	
+		}, (10000-(x * 100)))
+		
+		})(x, y);
 	}
 }
 
