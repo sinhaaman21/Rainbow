@@ -75,9 +75,14 @@ for (i=0;i<arrayId.length;i++){
 var colorBox = document.getElementsByClassName("box");
 for (x=0; x<50; x++){
 	for(y=0; y<colorBox.length; y++){
-		colorBox[y].style['border-radius']=x+"%"
+	(function(x,y){
+		setTimeout(function(){
+			colorBox[y].style['border-radius']=x+"%";	
+		}, 3000)})(x, y);
 	}
 }
+
+
 
 </script>
 
