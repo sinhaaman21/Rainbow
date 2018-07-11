@@ -73,20 +73,22 @@ for (i=0;i<arrayId.length;i++){
 	parent=color;
 }
 var colorBox = document.getElementsByClassName("box");
-for (x=0; x<50; x++){
-	for(y=0; y<colorBox.length; y++){
-	(function(x,y){
-		setTimeout(function(){
-			colorBox[y].style['border-radius']=x+"%";	
-		}, x * 100);
-		
-		setTimeout(function(){
-			colorBox[y].style['border-radius']=x+"%";	
-		}, (10000-(x * 100)))
-		
-		})(x, y);
+setInterval(function() {
+	for (x=0; x<50; x++){
+		for(y=0; y<colorBox.length; y++){
+		(function(x,y){
+			setTimeout(function(){
+				colorBox[y].style['border-radius']=x+"%";	
+			}, x * 100);
+			
+			setTimeout(function(){
+				colorBox[y].style['border-radius']=x+"%";	
+			}, (10000-(x * 100)))
+			
+			})(x, y);
+		}
 	}
-}
+},(10000))
 
 
 
